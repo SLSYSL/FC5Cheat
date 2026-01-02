@@ -1,3 +1,7 @@
 test/*
 src/backend/__pycache__/*
 src/backend/modify_utils/__pycache__/*
+src/*.bat
+src/dist/*
+src/build/*
+src/*.xml

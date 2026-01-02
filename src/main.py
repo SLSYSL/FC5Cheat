@@ -25,7 +25,7 @@ if __name__ == "__main__":
     )
 
     # 启动应用 (I/O阻塞)
-    webview.start(debug=True)
+    webview.start()
 
     # 当 WebView 窗口消失时再次输出日志
     logging.info("程序已结束")
