@@ -1,0 +1,93 @@
+<!-- HTML5
+index.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Far Cry 5 Cheat Desktop</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <script type="module" src="./js/web-components.min.js"></script>
+</head>
+
+<body>
+    <fluent-tabs>
+        <fluent-tab id="cheat">&#x1F6E0;&#xFE0F;修改器</fluent-tab>
+        <fluent-tab id="about">&#x2139;&#xFE0F;关于</fluent-tab>
+        <fluent-tab-panel id="cheat">
+            <fluent-card>
+                <div class="cheat-title">
+                    <fluent-heading>
+                        &#x1F504; 初始化修改器 (Initialize Modifier)
+                    </fluent-heading>
+                </div>
+                <fluent-divider></fluent-divider>
+                <p>注意: 初始化修改器才能进行修改操作 (需要先启动游戏)</p>
+                <p>初始化修改器是为了锁定游戏主进程 (不锁定无法进行修改)</p>
+                <fluent-button id="Lock" appearance="accent">
+                    锁定 (Lock)
+                </fluent-button>
+                <fluent-button id="Unlock">
+                    取消锁定 (Unlock)
+                </fluent-button>
+            </fluent-card>
+            <fluent-card>
+                <div class="cheat-title">
+                    <fluent-heading>
+                        &#x1F465; 玩家相关事件 (Player Related Stuff)
+                    </fluent-heading>
+                </div>
+                <fluent-divider></fluent-divider>
+                <div class="cheat-body">
+                    <fluent-switch id="Oxygen">
+                        <label>无限氧气 (Infinite Oxygen):</label>
+                    </fluent-switch>
+                    <fluent-switch id="Stamina">
+                        <label>无限体力 (Infinite Stamina):</label>
+                    </fluent-switch>
+                    <fluent-switch id="Noclip">
+                        <label>穿墙 (Wall-clipping):</label>
+                    </fluent-switch>
+                    <fluent-switch id="Stealth">
+                        <label>隐身 (Stealth):</label>
+                    </fluent-switch>
+                </div>
+            </fluent-card>
+        </fluent-tab-panel>
+        <fluent-tab-panel id="about">
+            <fluent-card>
+                <div class="cheat-title">
+                    <fluent-heading>
+                        &#x2139;&#xFE0F; 关于
+                    </fluent-heading>
+                </div>
+                <fluent-divider></fluent-divider>
+                <div class="cheat-body">
+                    <fluent-tree-view>
+                        <fluent-tree-item>
+                            介绍
+                            <fluent-tree-item>基于 Python 开发的《孤岛惊魂5》修改器</fluent-tree-item>
+                            <fluent-tree-item>开发者: LANREN</fluent-tree-item>
+                        </fluent-tree-item>
+                        <fluent-tree-item>
+                            版本号
+                            <fluent-tree-item>本软件: Beta V0.1.0</fluent-tree-item>
+                        </fluent-tree-item>
+                        <fluent-tree-item>
+                            技术栈
+                            <fluent-tree-item>后端: Python + Libmem + PyWebView (File 协议)</fluent-tree-item>
+                            <fluent-tree-item>前端: 原生 JavaScript + Fluent UI Web Components</fluent-tree-item>
+                        </fluent-tree-item>
+                    </fluent-tree-view>
+                </div>
+            </fluent-card>
+        </fluent-tab-panel>
+    </fluent-tabs>
+    <script src="./js/app.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/toasts.js"></script>
+</body>
+
+</html>

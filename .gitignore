@@ -1,0 +1,3 @@
+test/*
+src/backend/__pycache__/*
+src/backend/modify_utils/__pycache__/*
