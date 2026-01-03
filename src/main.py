@@ -6,7 +6,7 @@ main.py
 import logging
 import webview
 
-# from backend.utils import get_frontend
+from backend.utils import get_frontend
 from backend.logger import init_logger
 from backend.api import BackendAPI
 
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # 创建窗口
     webview.create_window(
         title="Far Cry 5 Cheat Desktop",
-        url="http://127.0.0.1:3000/Python/FC5 Cheat/src/frontend/index.html",
+        url=get_frontend(),  # 获取前端页面
         width=1100,
         height=750,
         js_api=BackendAPI(),  # 千万千万不要丢掉括号, 否则JS无法访问PY
