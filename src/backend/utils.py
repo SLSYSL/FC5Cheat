@@ -5,6 +5,7 @@ utils.py
 
 import os
 import logging
+import sys
 
 
 def get_frontend():
@@ -13,7 +14,11 @@ def get_frontend():
     返回值: 前端入口文件 file 协议
     """
     # 获取绝对路径
-    path = os.path.join("frontend", "index.html")
+    temp = getattr(sys, "_MEIPASS", None)
+    if temp is not None:
+        path = os.path.join(temp, "frontend", "index.html")
+    else:
+        path = os.path.join("frontend", "index.html")
     abs_path = os.path.abspath(path)
 
     # 转换 file 协议

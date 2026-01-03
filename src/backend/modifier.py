@@ -57,7 +57,7 @@ class Modifier:
             # 将进程关联到所有管理器
             self.process_association()
             return log_and_return("已连接到主进程", "success")
-        except Exception as e:
+        except Exception as e:  # pylint: disable=W0718
             self.process = None
             self.process_association()  # 同步空进程状态
             return log_and_return(f"连接失败: {e}", "error")
@@ -91,7 +91,7 @@ class Modifier:
             self.process = None
             self.process_association()
             return log_and_return(f"无法取消锁定: 系统资源错误 - {e}", "error")
-        except Exception as e:
+        except Exception as e:  # pylint: disable=W0718
             return log_and_return(f"无法取消锁定: {e}", "error")
 
     def stealth_mode(self, is_enabled):

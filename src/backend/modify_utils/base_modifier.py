@@ -65,7 +65,7 @@ class BaseModifier:
 
             self.target_addr = target_addr
             return True, "修改已启用"
-        except Exception as e:
+        except Exception as e:  # pylint: disable=W0718
             return False, f"启用失败: {e}"
 
     def disable(self):

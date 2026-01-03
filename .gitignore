@@ -5,3 +5,6 @@ src/*.bat
 src/dist/*
 src/build/*
 src/*.xml
+src/*.spec
+.vscode/*
+src/fc5cheat_env/*
